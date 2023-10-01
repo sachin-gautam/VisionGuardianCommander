@@ -1,0 +1,1021 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #262424;" styleClass="Pane" stylesheets="@../../../css/application.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminViewController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #262424;" stylesheets="@../../../css/application.css">
+         <children>
+         <Button fx:id="adminLoginCredentialsButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="1150.0" layoutY="7.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#addLoginInfo" prefHeight="40.0" prefWidth="300.0" style="-fx-background-color: #3a2c2c;" styleClass="Buttons" stylesheets="@../../../css/application.css" text="Add AppLogin User" textFill="#a22b2b">
+                 <font>
+                      <Font size="18.0" />
+                 </font>
+             </Button>
+        
+             
+            <ImageView fitHeight="594.0" fitWidth="1041.0" layoutX="232.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/admin_icons/admin-bg.png" />
+               </image>
+            </ImageView>
+            
+            <TitledPane fx:id="loginUserAddButton" expanded="false" layoutX="1180.0" layoutY="50.0" prefHeight="282.0" prefWidth="250.0" text="New Login User Form" visible="false">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="250.0" style="-fx-background-color: #3a2c2c;">
+                     <children>
+                        <Pane layoutX="-1.0" prefHeight="282.0" prefWidth="291.0" style="-fx-background-color: #3a2c2c;">
+                           <children>
+                              <Button fx:id="loginUserSaveButton" contentDisplay="TOP" layoutX="22.0" layoutY="143.0" mnemonicParsing="false" onAction="#userLoginAdd" prefHeight="90.0" prefWidth="92.0" style="-fx-background-color: #3a2c2c;" text="Save" textFill="#a22b2b">
+                                 <graphic>
+                                    <ImageView fitHeight="40.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../assets/admin_icons/save.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="usernameLoginField" layoutX="90.0" layoutY="27.0" prefHeight="30.0" prefWidth="157.0" promptText="Username" style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="3.0" layoutY="28.0" text="Username :" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              <TextField fx:id="passwordLoginField" layoutX="90.0" layoutY="90.0" prefHeight="30.0" prefWidth="159.0" promptText="Enter First Name" style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+         
+                              <Label layoutX="3.0" layoutY="90.0" text="Password :" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              
+                              <Label fx:id="adminLoginAddStatus" layoutX="153.0" layoutY="155.0" text=" " textAlignment="JUSTIFY" textFill="#a22b2b" visible="true">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <effect>
+                  <DropShadow spread="0.45" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TitledPane>
+            
+            
+            
+            
+            
+            <TitledPane fx:id="addDisplayScreen" expanded="false" layoutX="273.0" layoutY="63.0" prefHeight="619.0" prefWidth="642.0" text="Add User Display Screen" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="273.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="63.0" visible="false">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="530.0" prefWidth="218.0">
+                     <children>
+                        <Pane layoutX="-7.0" prefHeight="591.0" prefWidth="972.0" style="-fx-background-color: #3a2c2c;">
+                           <children>
+                              <Button fx:id="startCameraButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="14.0" layoutY="457.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#startCamera" prefHeight="120.0" prefWidth="154.0" style="-fx-background-color: #3a2c2c;" styleClass="Buttons" stylesheets="@../../../css/application.css" text="Start Camera" textAlignment="CENTER" textFill="#a22b2b" visible="false">
+                                 <graphic>
+                                    <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../assets/admin_icons/start-feed.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="savePhotoButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="168.0" layoutY="457.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#beginSave" prefHeight="120.0" prefWidth="154.0" style="-fx-background-color: #3a2c2c;" styleClass="Buttons" stylesheets="@../../../css/application.css" text="Camera Save" textAlignment="CENTER" textFill="#a22b2b" visible="false">
+                                 <graphic>
+                                    <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../assets/admin_icons/camera-save.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="saveFromFolderButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="322.0" layoutY="457.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#openFolder" prefHeight="120.0" prefWidth="154.0" style="-fx-background-color: #3a2c2c;" styleClass="Buttons" stylesheets="@../../../css/application.css" text="Folder Save" textAlignment="CENTER" textFill="#a22b2b" visible="false">
+                                 <graphic>
+                                    <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../assets/admin_icons/folder_save.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="stopCameraButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="476.0" layoutY="457.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#stopCamera" prefHeight="120.0" prefWidth="154.0" style="-fx-background-color: #3a2c2c;" styleClass="Buttons" stylesheets="@../../../css/application.css" text="Stop Camera" textAlignment="CENTER" textFill="#a22b2b" visible="false">
+                                 <graphic>
+                                    <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../assets/admin_icons/stop-feed.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Pane layoutX="20.0" layoutY="12.0" prefHeight="385.0" prefWidth="620.0" style="-fx-border-color: #a22b2b;">
+                                 <children>
+                                    <ImageView fx:id="feedWindow" fitHeight="385.0" fitWidth="619.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+                                 </children>
+                              </Pane>
+                              <Button fx:id="takeSnapButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="322.0" layoutY="457.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#takeSnap" prefHeight="120.0" prefWidth="154.0" style="-fx-background-color: #3a2c2c;" styleClass="Buttons" stylesheets="@../../../css/application.css" text="Snapshot" textAlignment="CENTER" textFill="#a22b2b" visible="false">
+                                 <graphic>
+                                    <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../assets/admin_icons/snapshot.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                           </children></Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <effect>
+                  <DropShadow spread="0.45" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TitledPane>
+            <SplitPane layoutY="-6.0" orientation="VERTICAL" prefHeight="726.0" prefWidth="220.0" style="-fx-background-color: #3a2c2c;">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="738.0" prefWidth="227.0" style="-fx-background-color: #3a2c2c;">
+                     <children>
+                        <Button fx:id="addNewFaceButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="-4.0" layoutY="14.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#addNewFace" prefHeight="110.0" prefWidth="226.0" style="-fx-background-color: #3a2c2c;" styleClass="Buttons" stylesheets="@../../../css/application.css" text="Add Record" textAlignment="CENTER" textFill="#a22b2b">
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/admin_icons/add-user.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        
+                        <Button fx:id="displayFacesRecordButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="-4.0" layoutY="149.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#displayFacesRecord" prefHeight="110.0" prefWidth="226.0" style="-fx-background-color: #3a2c2c;" stylesheets="@../../../css/application.css" text="Show Records" textAlignment="CENTER" textFill="#a22b2b">
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/admin_icons/show.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="updateFacesRecordButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="-1.0" layoutY="303.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#updateFacesRecord" prefHeight="110.0" prefWidth="220.0" style="-fx-background-color: #3a2c2c;" stylesheets="@../../../css/application.css" text="Update Record" textAlignment="CENTER" textFill="#a22b2b">
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/admin_icons/update.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="deleteFacesRecordButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="-4.0" layoutY="452.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#deleteFacesRecord" prefHeight="110.0" prefWidth="226.0" style="-fx-background-color: #3a2c2c;" stylesheets="@../../../css/application.css" text="Delete Record" textAlignment="CENTER" textFill="#a22b2b">
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/admin_icons/delete.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="backToMainButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="-4.0" layoutY="592.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="135.0" prefWidth="226.0" style="-fx-background-color: #3a2c2c;" stylesheets="@../../../css/application.css" text="Back" textAlignment="CENTER" textFill="#a22b2b">
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/admin_icons/back.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <TitledPane fx:id="recordFormButton" expanded="false" layoutX="929.0" layoutY="100.0" prefHeight="582.0" prefWidth="304.0" text="Record Form" visible="false">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="570.0" prefWidth="291.0" style="-fx-background-color: #3a2c2c;">
+                     <children>
+                        <Pane layoutX="-1.0" prefHeight="570.0" prefWidth="291.0" style="-fx-background-color: #3a2c2c;">
+                           <children>
+                              <Button fx:id="recordFormSaveButton" contentDisplay="TOP" layoutX="22.0" layoutY="443.0" mnemonicParsing="false" onAction="#recordFormSave" prefHeight="90.0" prefWidth="92.0" style="-fx-background-color: #3a2c2c;" text="Save" textFill="#a22b2b">
+                                 <graphic>
+                                    <ImageView fitHeight="40.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../assets/admin_icons/save.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="specialCodeField" layoutX="126.0" layoutY="27.0" prefHeight="30.0" prefWidth="157.0" promptText="Format 'U' + Num" style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="3.0" layoutY="28.0" text=" Unique Code :" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              <TextField fx:id="firstNameField" layoutX="126.0" layoutY="103.0" prefHeight="30.0" prefWidth="159.0" promptText="Enter First Name" style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="lastNameField" layoutX="126.0" layoutY="177.0" prefHeight="30.0" prefWidth="159.0" promptText="Enter Last Name" style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="registrationNumberField" layoutX="126.0" layoutY="248.0" prefHeight="30.0" prefWidth="158.0" promptText="Enter Registration No." style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="ageInfoField" layoutX="126.0" layoutY="317.0" prefHeight="30.0" prefWidth="158.0" promptText="Enter Age Info" style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="sexInfoField" layoutX="126.0" layoutY="387.0" prefHeight="30.0" prefWidth="158.0" promptText="Enter Sex Info" style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+          
+                              
+                              
+                              <Label layoutX="23.0" layoutY="104.0" text="First Name :" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              <Label layoutX="23.0" layoutY="178.0" text="Last Name :" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              <Label layoutX="43.0" layoutY="249.0" text="Reg No :" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              <Label layoutX="39.0" layoutY="318.0" text="Age Info :" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              <Label layoutX="43.0" layoutY="388.0" text="Sex Info :" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              <Label layoutX="183.0" layoutY="463.0" text="Status" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <effect>
+                  <DropShadow spread="0.45" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TitledPane>
+            <TitledPane fx:id="showDisplayScreen" expanded="false" layoutX="273.0" layoutY="63.0" prefHeight="619.0" prefWidth="642.0" text="Show Records Display Screen" visible="false" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="267.0" AnchorPane.rightAnchor="53.0" AnchorPane.topAnchor="51.0">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="530.0" prefWidth="218.0">
+                     <children>
+                        <Pane layoutX="-7.0" prefHeight="591.0" prefWidth="972.0" style="-fx-background-color: #3a2c2c;">
+                           <children>
+                              <Button fx:id="leftArrowButtom" onAction="#previousUser" contentDisplay="TOP" graphicTextGap="10.0" layoutX="14.0" layoutY="457.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="154.0" style="-fx-background-color: #3a2c2c;" styleClass="Buttons" stylesheets="@../../../css/application.css" textAlignment="CENTER" textFill="#a22b2b" >
+                                 <graphic>
+                                    <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../assets/admin_icons/left-arrow.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="rightArrowButtom" onAction="#nextUser" contentDisplay="TOP" graphicTextGap="10.0" layoutX="810.0" layoutY="457.0" lineSpacing="1.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="154.0" style="-fx-background-color: #3a2c2c;" styleClass="Buttons" stylesheets="@../../../css/application.css" textAlignment="CENTER" textFill="#a22b2b" >
+                                 <graphic>
+                                    <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../assets/admin_icons/right-arrow.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Pane layoutX="49.0" layoutY="46.0" prefHeight="385.0" prefWidth="335.0" style="-fx-background-color: #3a2c2c; -fx-border-color: #a22b2b;">
+                                 <children>
+                                    <ImageView fx:id="displayPhotoViewer" fitHeight="225.0" fitWidth="259.0" layoutX="38.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label layoutX="72.0" layoutY="310.0" text="Unique ID :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="displayPhotoLabel" layoutX="229.0" layoutY="310.0" text=" " textFill="#a22b2b">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                 </children></Pane>
+                              <Pane layoutX="424.0" layoutY="46.0" prefHeight="385.0" prefWidth="483.0" style="-fx-background-color: #3a2c2c; -fx-border-color: #a22b2b;">
+                                 <children>
+                                    <Label layoutX="36.0" layoutY="41.0" text="Full Name :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="displayScreenLabelName" layoutX="250.0" layoutY="41.0" text=" " textFill="#a22b2b">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label layoutX="36.0" layoutY="100.0" text="Registration No. :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="displayScreenRegistrationNo" layoutX="247.0" layoutY="100.0" text=" " textFill="#a22b2b">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label layoutX="36.0" layoutY="158.0" text="Age Info :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="displayScreenAgeInfo" layoutX="248.0" layoutY="158.0" text=" " textFill="#a22b2b">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label layoutX="36.0" layoutY="222.0" text="Sex Info :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="displayScreenSexInfo" layoutX="247.0" layoutY="222.0" text=" " textFill="#a22b2b">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label layoutX="36.0" layoutY="289.0" text="Photo Path :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="displayScreenPhotoPath" layoutX="247.0" layoutY="289.0" onMouseClicked="#openFile" text="./facePhotos" textFill="#a22b2b" underline="true">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                 </children></Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <effect>
+                  <DropShadow spread="0.45" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TitledPane>
+            <TitledPane fx:id="updateDisplayScreen" expanded="false" layoutX="273.0" layoutY="63.0" prefHeight="619.0" prefWidth="960.0" text="Update User Display Screen" visible="false">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="530.0" prefWidth="218.0">
+                     <children>
+                        <Pane layoutX="-7.0" prefHeight="591.0" prefWidth="972.0" style="-fx-background-color: #3a2c2c;">
+                           <children>
+                              <Pane layoutX="35.0" layoutY="174.0" prefHeight="385.0" prefWidth="244.0" style="-fx-background-color: #3a2c2c; -fx-border-color: #a22b2b;">
+                                 <children>
+                                    <ImageView fx:id="updateScreenViewer" fitHeight="179.0" fitWidth="177.0" layoutX="33.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label layoutX="24.0" layoutY="293.0" text="Unique ID :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="updateScreenLabelUniqueCode" layoutX="180.0" layoutY="293.0" text=" " textFill="#a22b2b">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="278.0" layoutY="174.0" prefHeight="385.0" prefWidth="378.0" style="-fx-background-color: #3a2c2c; -fx-border-color: #a22b2b;">
+                                 <children>
+                                    <Label layoutX="28.0" layoutY="41.0" text="Full Name :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="updateScreenLabelFullName" layoutX="192.0" layoutY="41.0" prefHeight="27.0" prefWidth="180.0" text=" " textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label layoutX="28.0" layoutY="100.0" text="Registration No. :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="updateScreenLabelRegistrationNo" layoutX="189.0" layoutY="100.0" prefHeight="27.0" prefWidth="183.0" text=" " textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label layoutX="28.0" layoutY="158.0" text="Age Info :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="updateScreenLabelAgeInfo" layoutX="190.0" layoutY="158.0" prefHeight="27.0" prefWidth="181.0" text=" " textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label layoutX="28.0" layoutY="222.0" text="Sex Info :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="updateScreenLabelSexInfo" layoutX="189.0" layoutY="222.0" prefHeight="27.0" prefWidth="183.0" text=" " textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label layoutX="28.0" layoutY="289.0" text="Photo Path :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="updateScreenLabelPhotoPath" layoutX="189.0" layoutY="289.0" onMouseClicked="#openFile" prefHeight="27.0" prefWidth="183.0" text="./facePhotos" textFill="#a22b2b" underline="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <TextField fx:id="updateSearchTextField" layoutX="35.0" layoutY="67.0" prefHeight="47.0" prefWidth="243.0" promptText="Enter Unique Code" style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="updateSearchButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="279.0" layoutY="32.0" lineSpacing="1.0" onAction="#updateSearch" mnemonicParsing="false" prefHeight="110.0" prefWidth="133.0" style="-fx-background-color: #3a2c2c;" styleClass="Buttons" stylesheets="@../../../css/application.css" textAlignment="CENTER" textFill="#a22b2b">
+                                 <graphic>
+                                    <ImageView fitHeight="70.0" fitWidth="100.0" onMouseClicked="#searchUser" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../assets/admin_icons/search.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <effect>
+                  <DropShadow spread="0.45" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TitledPane>
+            <TitledPane fx:id="updateScreenRecordForm" expanded="false"  layoutX="931.0" layoutY="100.0" prefHeight="568.0" prefWidth="304.0" text="Update Form" visible="false">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="570.0" prefWidth="291.0" style="-fx-background-color: #3a2c2c;">
+                     <children>
+                        <Pane layoutX="-1.0" prefHeight="570.0" prefWidth="291.0" style="-fx-background-color: #3a2c2c;">
+                           <children>
+                              <Button fx:id="updateSaveButton" contentDisplay="TOP" layoutX="22.0" layoutY="443.0" onAction="#updateFormSave" mnemonicParsing="false" prefHeight="90.0" prefWidth="92.0" style="-fx-background-color: #3a2c2c;" text="Update" textFill="#a22b2b">
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../assets/admin_icons/update-button.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="updateSpecialCodeField" layoutX="126.0" layoutY="27.0" prefHeight="30.0" prefWidth="157.0" promptText="Format 'U' + Num" style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="3.0" layoutY="28.0" text=" Unique Code :" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              <TextField fx:id="updateFirstNameField" layoutX="126.0" layoutY="103.0" prefHeight="30.0" prefWidth="159.0" promptText="Enter First Name" style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="updateLastNameField" layoutX="126.0" layoutY="177.0" prefHeight="30.0" prefWidth="159.0" promptText="Enter Last Name" style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="updateRegistrationNumberField" layoutX="126.0" layoutY="248.0" prefHeight="30.0" prefWidth="158.0" promptText="Enter Registration No." style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="updateAgeInfoField" layoutX="126.0" layoutY="317.0" prefHeight="30.0" prefWidth="158.0" promptText="Enter Age" style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="updateSexInfoField" layoutX="126.0" layoutY="387.0" prefHeight="30.0" prefWidth="158.0" promptText="Enter Sex" style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              
+                              <Label layoutX="23.0" layoutY="104.0" text="First Name :" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              <Label layoutX="23.0" layoutY="178.0" text="Last Name :" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              <Label layoutX="43.0" layoutY="249.0" text="Reg No :" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              <Label layoutX="39.0" layoutY="318.0" text="Age Info :" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              <Label layoutX="43.0" layoutY="388.0" text="Sex Info :" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              <Label fx:id="updateFormLogDisplayLabel" layoutX="183.0" layoutY="463.0" text="Status" textAlignment="JUSTIFY" textFill="#a22b2b">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <effect>
+                  <DropShadow spread="0.45" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TitledPane>
+            <TitledPane fx:id="deleteDisplayScreen" expanded="false" layoutX="273.0" layoutY="63.0" prefHeight="619.0" prefWidth="960.0" text="Delete User Display Screen" visible="false">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="530.0" prefWidth="218.0">
+                     <children>
+                        <Pane layoutX="-7.0" prefHeight="591.0" prefWidth="972.0" style="-fx-background-color: #3a2c2c;">
+                           <children>
+                              <Pane layoutX="35.0" layoutY="174.0" prefHeight="385.0" prefWidth="332.0" style="-fx-background-color: #3a2c2c; -fx-border-color: #a22b2b;">
+                                 <children>
+                                    <ImageView fx:id="deleteScreenViewer" fitHeight="219.0" fitWidth="226.0" layoutX="53.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label layoutX="53.0" layoutY="293.0" text="Unique ID :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="deleteScreenPhotoLabel" layoutX="220.0" layoutY="293.0" text=" " textFill="#a22b2b">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="428.0" layoutY="174.0" prefHeight="385.0" prefWidth="500.0" style="-fx-background-color: #3a2c2c; -fx-border-color: #a22b2b;">
+                                 <children>
+                                    <Label layoutX="28.0" layoutY="41.0" text="Full Name :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="deleteScreenLabelName" layoutX="192.0" layoutY="41.0" prefHeight="27.0" prefWidth="180.0" text=" " textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label layoutX="28.0" layoutY="100.0" text="Registration No. :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="deleteScreenLabelRegistrationNo" layoutX="189.0" layoutY="100.0" prefHeight="27.0" prefWidth="183.0" text=" " textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label layoutX="28.0" layoutY="158.0" text="Age Info :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="deleteScreenLabelAgeInfo" layoutX="190.0" layoutY="158.0" prefHeight="27.0" prefWidth="181.0" text=" " textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label layoutX="28.0" layoutY="222.0" text="Sex Info :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="deleteScreenLabelSexInfo" layoutX="189.0" layoutY="222.0" prefHeight="27.0" prefWidth="183.0" text=" " textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label layoutX="28.0" layoutY="289.0" text="Photo Path :" textFill="#a22b2b">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label fx:id="deleteScreenLabelPhotoPath" layoutX="189.0" layoutY="289.0" onMouseClicked="#openFile" prefHeight="27.0" prefWidth="183.0" text="./facePhotos" textFill="#a22b2b" underline="true">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <TextField fx:id="deleteSearchTextField" layoutX="35.0" layoutY="67.0" prefHeight="47.0" prefWidth="243.0" promptText="Enter Unique Code" style="-fx-background-color: #262424; -fx-border-color: #a22b2b; -fx-text-fill: #F1F2F3;">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="deleteSearchButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="279.0" layoutY="32.0" lineSpacing="1.0" onAction="#searchToDelete" mnemonicParsing="false" prefHeight="110.0" prefWidth="133.0" style="-fx-background-color: #3a2c2c;" styleClass="Buttons" stylesheets="@../../../css/application.css" textAlignment="CENTER" textFill="#a22b2b">
+                                 <graphic>
+                                    <ImageView fitHeight="70.0" fitWidth="100.0" onMouseClicked="#previousUser" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../assets/admin_icons/search.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="deleteRecordButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="486.0" layoutY="35.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#deleteRecord" prefHeight="110.0" prefWidth="133.0" style="-fx-background-color: #3a2c2c;" styleClass="Buttons" stylesheets="@../../../css/application.css" textAlignment="CENTER" textFill="#a22b2b">
+                                 <graphic>
+                                    <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../assets/admin_icons/delete-icon.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="deleteConfirmButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="644.0" layoutY="30.0" lineSpacing="1.0" onAction="#deleteConfirm" visible="false" mnemonicParsing="false" prefHeight="110.0" prefWidth="133.0" style="-fx-background-color: #3a2c2c;" styleClass="Buttons" stylesheets="@../../../css/application.css" textAlignment="CENTER" textFill="#a22b2b">
+                                 <graphic>
+                                    <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../assets/admin_icons/tick.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="deleteRejectButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="771.0" layoutY="30.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#deleteReject" visible="false" prefHeight="110.0" prefWidth="133.0" style="-fx-background-color: #3a2c2c;" styleClass="Buttons" stylesheets="@../../../css/application.css" textAlignment="CENTER" textFill="#a22b2b">
+                                 <graphic>
+                                    <ImageView fitHeight="70.0" fitWidth="100.0"  pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../assets/admin_icons/cross.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <effect>
+                  <DropShadow spread="0.45" />
+               </effect>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TitledPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

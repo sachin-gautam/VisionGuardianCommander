@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #262424;" styleClass="Pane" stylesheets="@../../../css/application.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainViewController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #262424;" stylesheets="@../../../css/application.css">
+         <children>
+            <TitledPane animated="true" layoutX="46.0" layoutY="116.0" prefHeight="543.0" prefWidth="322.0" text="Detected Display">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="517.0" prefWidth="335.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutX="10.0" layoutY="7.0" orientation="VERTICAL" prefHeight="499.0" prefWidth="298.0" style="-fx-background-color: #0000;">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="246.0" prefWidth="330.0">
+                                 <children>
+                                    <ImageView fx:id="photoDetail" fitHeight="236.0" fitWidth="287.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true">
+                                       <effect>
+                        			   		<DropShadow />
+                     					</effect>
+                     					<image>
+                        					<Image url="@../../../assets/icons/no-feed.png" />
+                     					</image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="252.0" prefWidth="330.0">
+                                 <children>
+                                    <Label fx:id="userDetailsLabel" alignment="TOP_CENTER" layoutX="-87.0" layoutY="5.0" prefHeight="287.0" prefWidth="448.0" style="-fx-background-color: #3a2c2c; -fx-text-fill: white;" text="Details:" textAlignment="JUSTIFY">
+                                       <font>
+                                          <Font name="Noto Sans Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+		         
+                     
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <AnchorPane layoutX="450.0" layoutY="115.0" minHeight="0.0" minWidth="0.0" prefHeight="440.0" prefWidth="640.0" style="-fx-background-color: #3a2c2c;">
+               <children>
+                  <ImageView fx:id="feedWindow" fitHeight="415.0" fitWidth="615.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="false">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <image>
+                        <Image url="@../../../assets/icons/no-feed.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            
+            <TitledPane animated="true" layoutX="1170.0" layoutY="115.0" prefHeight="552.0" prefWidth="250.0" text="Logs Output">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="530.0" prefWidth="250.0">
+                     <children>
+                        <Pane layoutX="-7.0" prefHeight="535.0" prefWidth="258.0" style="-fx-background-color: #3a2c2c;" />
+                        <ListView fx:id="logList" layoutX="10.0" layoutY="10.0" prefHeight="515.0" prefWidth="230.0" style="-fx-background-color: #3a2c2c; -fx-text-fill: #000000; -fx-font-weight: bold; ">
+                                <effect>
+                                    <Glow />
+                                </effect>
+                        </ListView>
+                     </children>
+                 </AnchorPane>
+              </content>
+            </TitledPane>
+            
+    
+ 
+            
+            
+            <Button fx:id="startCameraButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="450.0" layoutY="560.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#startCamera" prefHeight="82.0" prefWidth="134.0" style="-fx-background-color: #262424;" styleClass="Buttons" stylesheets="@../../../css/application.css" text="Start Feed" textAlignment="CENTER" textFill="#a22b2b">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/icons/start-feed.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                        <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="stopCameraButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="615.0" layoutY="560.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#stopCamera" prefHeight="82.0" prefWidth="134.0" style="-fx-background-color: #262424;" stylesheets="@../../../css/application.css" text="Stop Feed" textAlignment="CENTER" textFill="#a22b2b">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/icons/stop-feed.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                        <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="monitorButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="780.0" layoutY="560.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#startMonitor" prefHeight="110.0" prefWidth="141.0" style="-fx-background-color: #262424;" stylesheets="@../../../css/application.css" text="Monitor" textAlignment="CENTER" textFill="#a22b2b">
+               <graphic>
+                  <ImageView fitHeight="61.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/icons/monitor.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                        <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="adminPanelButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="945.0" layoutY="560.0" lineSpacing="1.0" mnemonicParsing="false" onAction="#startAdminPanel" prefHeight="110.0" prefWidth="137.0" style="-fx-background-color: #262424;" stylesheets="@../../../css/application.css" text="Admin" textAlignment="CENTER" textFill="#a22b2b">
+               <graphic>
+                  <ImageView fitHeight="53.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/icons/admin.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                        <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="96.0" fitWidth="200.0" layoutX="675.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <image>
+                  <Image url="@../../../assets/icons/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

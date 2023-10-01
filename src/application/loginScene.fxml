@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #262424;" stylesheets="@../../../css/buttons/button.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginSceneController">
+   <children>
+      <AnchorPane layoutX="-7.0" layoutY="-6.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #262424;" styleClass="Pane">
+         <children>
+            <ImageView fitHeight="158.0" fitWidth="346.0" layoutX="461.0" layoutY="85.0" preserveRatio="true" scaleX="1" scaleY="1" >
+               <image>
+                  <Image url="@../../../assets/login_view/animated_logo.gif" />
+               </image>
+            </ImageView>
+            <TextField fx:id="usernameField" layoutX="566.0" layoutY="354.0" prefHeight="26.0" prefWidth="212.0" style="-fx-background-color: #F1F2F3;" />
+            <PasswordField fx:id="passwordField" layoutX="566.0" layoutY="424.0" onKeyPressed="#handleEnterKey" prefHeight="26.0" prefWidth="212.0" />
+            <Label layoutX="466.0" layoutY="354.0" text="Username: " textFill="#a22b2b">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label layoutX="466.0" layoutY="424.0" text="Password: " textFill="#a22b2b">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button layoutX="466.0" layoutY="484.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="26.0" prefWidth="150.0" styleClass="btn" text="Log In" />
+            <Button layoutX="626.0" layoutY="484.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="26.0" prefWidth="150.0" styleClass="btn" text="Cancel" />
+            
+            
+			<VBox fx:id="errorMessageBox" alignment="CENTER" layoutX="630.0" layoutY="550.0" spacing="10">
+   				 
+			</VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
